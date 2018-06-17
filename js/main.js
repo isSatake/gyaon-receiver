@@ -24,8 +24,8 @@ var print = function(data){
 };
 
 window.onload = function(){
-  var socket = io.connect('http://linda-server.herokuapp.com:80');
-  var source = localStorage.getItem("source") || "global";
+  var socket = io.connect('https://linda-server.herokuapp.com');
+  var source = location.search.substring(1).split('&')[0] || localStorage.getItem("source") || "global";
   var linda = new Linda().connect(socket);
   var ts = linda.tuplespace(source);
 
