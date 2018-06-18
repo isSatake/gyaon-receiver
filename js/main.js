@@ -25,7 +25,7 @@ var print = function(data){
 
 window.onload = function(){
   var socket = io.connect('https://linda-server.herokuapp.com');
-  var source = location.search.substring(1).split('&')[0] || localStorage.getItem("source") || "global";
+  var source = location.search.substring(1).split('&')[0] || localStorage.getItem("source") || "masuilab";
   var linda = new Linda().connect(socket);
   var ts = linda.tuplespace(source);
 
