@@ -53,7 +53,7 @@ export default class Root extends React.Component<{}, RootState> {
         this.start();
 
         const io = require("../../lib/socket.io.js");
-        const socket = io.connect("http://linda-server.herokuapp.com:80");
+        const socket = io.connect("https://linda-server.herokuapp.com");
         require("../../lib/linda.js");
         const linda = new Linda().connect(socket);
         const ts = linda.tuplespace("masuilab");
